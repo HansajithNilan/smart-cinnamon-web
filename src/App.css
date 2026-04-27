@@ -1,3 +1,16 @@
+:root {
+  --primary: #8bc34a;
+  --primary-dark: #689f38;
+  --bg-dark: #07130c;
+  --bg-card: #102818;
+  --text-primary: #f8fff9;
+  --text-secondary: #a8c9ad;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -14,7 +27,7 @@ body {
 }
 
 .hero {
-  padding: 90px 8%;
+  padding: 140px 8% 90px;
   text-align: center;
   background:
     linear-gradient(rgba(7, 19, 12, 0.82), rgba(7, 19, 12, 0.95)),
@@ -114,7 +127,7 @@ h1 {
   margin-bottom: 16px;
 }
 
-.section > p {
+.section>p {
   max-width: 950px;
   color: #d6e5d8;
   line-height: 1.8;
@@ -151,12 +164,29 @@ h1 {
   margin-top: 30px;
 }
 
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card-link:hover {
+  transform: translateY(-10px);
+}
+
 .card {
   background: linear-gradient(145deg, #102818, #07150d);
   border: 1px solid rgba(139, 195, 74, 0.28);
   border-radius: 28px;
   padding: 28px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary);
 }
 
 .cardIcon {
@@ -214,6 +244,44 @@ h1 {
   color: #caff9b !important;
 }
 
+.card-footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.view-details {
+  color: var(--primary);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(139, 195, 74, 0.1);
+  color: var(--primary);
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  padding: 8px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  background: var(--primary);
+  color: #07130c;
+  transform: scale(1.05);
+}
+
 .conclusion {
   background: #0c1f12;
   text-align: center;
@@ -224,6 +292,7 @@ h1 {
 }
 
 @media (max-width: 900px) {
+
   .stats,
   .grid {
     grid-template-columns: 1fr;
