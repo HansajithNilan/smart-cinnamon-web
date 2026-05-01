@@ -7,6 +7,7 @@ import {
   ShieldCheck,
   Facebook,
   Linkedin,
+  FileText,
 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { researchData } from "../data/researchData.jsx";
@@ -86,8 +87,8 @@ const Home = () => {
         <h2>Research Gap</h2>
         <div className="gap-content">
           <p>
-            Despite the economic importance of the cinnamon industry, current practices 
-            rely heavily on traditional methods, leading to significant inefficiencies. 
+            Despite the economic importance of the cinnamon industry, current practices
+            rely heavily on traditional methods, leading to significant inefficiencies.
             Our research addresses the following critical gaps:
           </p>
           <div className="gap-grid">
@@ -145,7 +146,7 @@ const Home = () => {
               </div>
 
               <p className="accuracy">{item.accuracy}</p>
-              
+
               <div className="card-footer">
                 <span className="view-details">View Details →</span>
               </div>
@@ -154,13 +155,15 @@ const Home = () => {
         </div>
       </section>
 
+
+
       <section id="about" className="section about-us">
         <h2>About Us</h2>
         <p className="section-desc">
-          We are a team of passionate researchers and engineers dedicated to 
+          We are a team of passionate researchers and engineers dedicated to
           modernizing the cinnamon industry through cutting-edge technology.
         </p>
-        
+
         <div className="team-grid">
           {researchData.map((member) => (
             <div className="team-member" key={member.id}>

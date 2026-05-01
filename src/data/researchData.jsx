@@ -10,8 +10,8 @@ export const researchData = [
     owner: "Bangamuwage M.D",
     studentId: "IT22592606",
     photo: "/smart-cinnamon-web/images/team/member1.jpg",
-    facebook: "https://facebook.com",
-    linkedin: "https://linkedin.com",
+    facebook: "https://web.facebook.com/madusha.dilshan.37853?mibextid=wwXIfr&rdid=c2j4kDmGJdNvwR5l&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F17rGDx54NS%2F%3Fmibextid%3DwwXIfr%26ref%3D1%26_rdc%3D1%26_rdr#",
+    linkedin: "https://www.linkedin.com/in/madusha-dilshan-30827928a/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bmy13nhQ7SmWKhrFJYW%2FumQ%3D%3D",
     description:
       "IoT and machine learning based system for real-time soil nutrient monitoring, fertilizer deficit detection, and precision fertilizer recommendation for cinnamon export estates.",
     tech: ["ESP32", "NPK Sensors", "MQTT", "Random Forest", "CatBoost", "XGBoost"],
@@ -23,6 +23,7 @@ export const researchData = [
     ],
     accuracy: "Overall expected accuracy: 90% - 95%",
     proposalUrl: "/smart-cinnamon-web/proposals/fertilizer_proposal.pdf",
+    tafUrl: "/smart-cinnamon-web/taf/research_taf.pdf",
     fullDetails: "Detailed information about the IoT sensors used, the calibration process for NPK sensors, and how the machine learning models (Random Forest, CatBoost, XGBoost) are integrated to provide real-time recommendations. This module focuses on optimizing the nutrient balance in the soil to maximize cinnamon yield while minimizing environmental impact.",
   },
   {
@@ -46,6 +47,7 @@ export const researchData = [
     ],
     accuracy: "Overall expected accuracy: 80% - 90%",
     proposalUrl: "/smart-cinnamon-web/proposals/detection_proposal.pdf",
+    tafUrl: "/smart-cinnamon-web/taf/research_taf.pdf",
     fullDetails: "This component utilizes state-of-the-art computer vision models like YOLO and DeepLabV3 on satellite and drone imagery. By calculating NDVI (Normalized Difference Vegetation Index), the system identifies healthy versus vacant patches. The GIS integration allows for precise area measurement and cost estimation for replanting, helping plantation owners plan their resources effectively.",
   },
   {
@@ -56,7 +58,7 @@ export const researchData = [
     owner: "W. W. G. D. Vihani",
     studentId: "IT22594372",
     photo: "/smart-cinnamon-web/images/team/member3.jpg",
-    facebook: "https://facebook.com",
+    facebook: "https://www.facebook.com/share/1BeVKA7Nv3/?mibextid=wwXIfr",
     linkedin: "https://linkedin.com",
     description:
       "Multi-sensor IoT and ML early-warning system that monitors warehouse conditions and predicts risks like mold, color fade, powdering and aroma loss.",
@@ -69,6 +71,7 @@ export const researchData = [
     ],
     accuracy: "Overall expected accuracy: 90% - 95%",
     proposalUrl: "/smart-cinnamon-web/proposals/warehouse_proposal.pdf",
+    tafUrl: "/smart-cinnamon-web/taf/research_taf.pdf",
     appScreenshots: [
       "/smart-cinnamon-web/images/warehouse/screen1.jpg",
       "/smart-cinnamon-web/images/warehouse/screen2.jpg",
@@ -85,8 +88,8 @@ export const researchData = [
     owner: "Randeni R.P.R.M",
     studentId: "IT22578778",
     photo: "/smart-cinnamon-web/images/team/member4.jpg",
-    facebook: "https://facebook.com",
-    linkedin: "https://linkedin.com",
+    facebook: "https://www.facebook.com/rushani.randeni",
+    linkedin: "https://lk.linkedin.com/in/rushani-madhushika",
     description:
       "Mobile ML-based forecasting system that detects fungal infection from cinnamon leaf images and predicts future spread using time-series models.",
     tech: ["React Native", "OpenCV", "CNN", "LSTM", "GRU", "TensorFlow"],
@@ -98,6 +101,7 @@ export const researchData = [
     ],
     accuracy: "Overall expected accuracy: 85% - 95%",
     proposalUrl: "/smart-cinnamon-web/proposals/fungal_proposal.pdf",
+    tafUrl: "/smart-cinnamon-web/taf/research_taf.pdf",
     fullDetails: "Leveraging mobile technology, this module allows farmers to detect diseases in the field. CNNs are used for image classification and infection level detection, while LSTM and GRU models forecast the spread based on environmental factors. The system provides actionable recommendations, helping to contain fungal outbreaks before they spread through the entire plantation.",
   },
 ];

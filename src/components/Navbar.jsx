@@ -42,6 +42,7 @@ const Navbar = () => {
           <a href="#gap" onClick={(e) => handleNavClick(e, "#gap")}>Research Gap</a>
           <a href="#about" onClick={(e) => handleNavClick(e, "#about")}>About Us</a>
           <a href="#impact" onClick={(e) => handleNavClick(e, "#impact")}>Impact</a>
+          <Link to="/documents" onClick={() => setIsOpen(false)}>Documents</Link>
           <button className="nav-cta">Get Started</button>
         </div>
 

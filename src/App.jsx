@@ -4,6 +4,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import ResearchDetail from "./pages/ResearchDetail";
+import Documents from "./pages/Documents";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/research/:id" element={<ResearchDetail />} />
+          <Route path="/documents" element={<Documents />} />
         </Routes>
       </main>
     </Router>

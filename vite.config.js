@@ -5,4 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/smart-cinnamon-web/',
   plugins: [react()],
+  assetsInclude: ['**/*.xlsx'],
 })

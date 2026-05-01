@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, CheckCircle2, Cpu, Activity, ShieldCheck, Target, Download } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Cpu, Activity, ShieldCheck, Target, Download, FileText } from "lucide-react";
 import { researchData } from "../data/researchData.jsx";
 import "./ResearchDetail.css";
 
@@ -85,6 +85,14 @@ const ResearchDetail = () => {
             <p>Download the comprehensive project proposal PDF.</p>
             <a href={data.proposalUrl} download className="sidebar-download-btn">
               Download Proposal
+            </a>
+          </div>
+
+          <div className="sidebar-card download-card taf-card">
+            <h3><FileText size={18} /> Topic Assessment (TAF)</h3>
+            <p>Download the official TAF document for this research.</p>
+            <a href={data.tafUrl} download className="sidebar-download-btn taf-btn">
+              Download TAF
             </a>
           </div>
 
