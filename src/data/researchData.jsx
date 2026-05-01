@@ -9,6 +9,9 @@ export const researchData = [
     title: "Smart Fertilizer Recommendation",
     owner: "Bangamuwage M.D",
     studentId: "IT22592606",
+    photo: "/smart-cinnamon-web/images/team/member1.jpg",
+    facebook: "https://facebook.com",
+    linkedin: "https://linkedin.com",
     description:
       "IoT and machine learning based system for real-time soil nutrient monitoring, fertilizer deficit detection, and precision fertilizer recommendation for cinnamon export estates.",
     tech: ["ESP32", "NPK Sensors", "MQTT", "Random Forest", "CatBoost", "XGBoost"],
@@ -29,6 +32,9 @@ export const researchData = [
     title: "Vacant Area Detection & Yield Forecasting",
     owner: "Hansajith W.R.N",
     studentId: "IT22565594",
+    photo: "/smart-cinnamon-web/images/team/member2.jpg",
+    facebook: "https://web.facebook.com/profile.php?id=61567164418143",
+    linkedin: "https://www.linkedin.com/in/nilan-hansajith-358798301/",
     description:
       "Satellite, GIS and ML based decision support system to detect vacant plantation areas, estimate replant counts, calculate costs and forecast cinnamon yield.",
     tech: ["CNN", "YOLO", "DeepLabV3", "NDVI", "GIS", "VQA"],
@@ -49,6 +55,9 @@ export const researchData = [
     title: "Post-Harvest Warehouse Quality Guard",
     owner: "W. W. G. D. Vihani",
     studentId: "IT22594372",
+    photo: "/smart-cinnamon-web/images/team/member3.jpg",
+    facebook: "https://facebook.com",
+    linkedin: "https://linkedin.com",
     description:
       "Multi-sensor IoT and ML early-warning system that monitors warehouse conditions and predicts risks like mold, color fade, powdering and aroma loss.",
     tech: ["ESP32", "IoT Sensors", "LightGBM", "XGBoost", "MQTT", "React"],
@@ -75,6 +84,9 @@ export const researchData = [
     title: "Cinnamon Leaf Fungal Spread Predictor",
     owner: "Randeni R.P.R.M",
     studentId: "IT22578778",
+    photo: "/smart-cinnamon-web/images/team/member4.jpg",
+    facebook: "https://facebook.com",
+    linkedin: "https://linkedin.com",
     description:
       "Mobile ML-based forecasting system that detects fungal infection from cinnamon leaf images and predicts future spread using time-series models.",
     tech: ["React Native", "OpenCV", "CNN", "LSTM", "GRU", "TensorFlow"],

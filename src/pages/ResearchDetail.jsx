@@ -25,7 +25,12 @@ const ResearchDetail = () => {
       </Link>
 
       <header className="detail-header">
-        <div className="header-icon">{data.icon}</div>
+        <div className="header-top">
+          <div className="header-icon">{data.icon}</div>
+          <div className="researcher-profile">
+            <img src={data.photo} alt={data.owner} className="profile-img" />
+          </div>
+        </div>
         <div className="header-content">
           <div className="header-badge">Research Component</div>
           <h1>{data.title}</h1>
