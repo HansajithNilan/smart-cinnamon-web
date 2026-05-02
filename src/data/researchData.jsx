@@ -1,6 +1,12 @@
 import React from "react";
 import { Leaf, Sprout, Map, Warehouse } from "lucide-react";
 
+import vaImg1 from "../assets/vacantAreaScreens/IMG_3727.PNG";
+import vaImg2 from "../assets/vacantAreaScreens/IMG_3728.PNG";
+import vaImg3 from "../assets/vacantAreaScreens/IMG_3729.PNG";
+import vaImg4 from "../assets/vacantAreaScreens/IMG_3730.PNG";
+import vaChatImg from "../assets/vacantAreaScreens/chatimage.PNG";
+
 export const researchData = [
   {
     id: "fertilizer",
@@ -44,11 +50,18 @@ export const researchData = [
       "Measure vacant area using GIS",
       "Estimate plant count and replanting cost",
       "Forecast yield and historical land queries",
+      "AI Chat application for interactive cinnamon guidance",
     ],
     accuracy: "Overall expected accuracy: 80% - 90%",
     proposalUrl: "/smart-cinnamon-web/proposals/detection_proposal.pdf",
     tafUrl: "/smart-cinnamon-web/taf/research_taf.pdf",
+    appScreenshots: [vaImg1, vaImg2, vaImg3, vaImg4],
     fullDetails: "This component utilizes state-of-the-art computer vision models like YOLO and DeepLabV3 on satellite and drone imagery. By calculating NDVI (Normalized Difference Vegetation Index), the system identifies healthy versus vacant patches. The GIS integration allows for precise area measurement and cost estimation for replanting, helping plantation owners plan their resources effectively.",
+    aiChat: {
+      image: vaChatImg,
+      title: "Interactive AI Cultivation Assistant",
+      description: "Experience our integrated AI Chat application designed specifically for cinnamon cultivation. Users can easily query detailed information, learn about best practices, and receive interactive, step-by-step instructions on managing their cinnamon estates directly within the app."
+    }
   },
   {
     id: "warehouse",

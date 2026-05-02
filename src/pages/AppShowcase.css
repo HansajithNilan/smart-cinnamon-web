@@ -1,0 +1,187 @@
+.app-showcase-container {
+  padding: 120px 5% 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.showcase-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.showcase-title {
+  font-size: 3rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.showcase-title span {
+  color: #27ae60;
+}
+
+.showcase-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.features-badges {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(39, 174, 96, 0.1);
+  padding: 12px 24px;
+  border-radius: 50px;
+  color: #27ae60;
+  font-weight: 600;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.badge:hover {
+  transform: translateY(-5px);
+  background: rgba(39, 174, 96, 0.2);
+}
+
+.badge-icon {
+  color: #27ae60;
+}
+
+.screenshots-section {
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-heading::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 4px;
+  background: #27ae60;
+  bottom: -10px;
+  left: 25%;
+  border-radius: 2px;
+}
+
+.gallery-container {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0 40px;
+}
+
+.screenshots-gallery {
+  display: flex;
+  width: max-content;
+  gap: 30px;
+  animation: scrollLeft 35s linear infinite;
+}
+
+.screenshots-gallery:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 15px));
+  }
+}
+
+.screenshot-wrapper {
+  flex: 0 0 auto;
+  width: 280px;
+  perspective: 1000px;
+}
+
+.device-frame {
+  background: #111;
+  border-radius: 40px;
+  padding: 12px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+}
+
+/* Simulated iPhone notch */
+.device-frame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45%;
+  height: 25px;
+  background: #111;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  z-index: 2;
+}
+
+.device-frame:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 35px 60px -15px rgba(39, 174, 96, 0.3);
+}
+
+.device-frame img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  display: block;
+  object-fit: cover;
+  background: white; /* fallback for transparent images */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .app-showcase-container {
+    padding: 100px 5% 40px;
+  }
+
+  .showcase-title {
+    font-size: 2.2rem;
+  }
+  
+  .showcase-subtitle {
+    font-size: 1rem;
+  }
+  
+  .screenshot-wrapper {
+    width: 240px;
+  }
+  
+  .features-badges {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -269,6 +269,38 @@
   box-shadow: 0 5px 15px rgba(96, 165, 250, 0.3);
 }
 
+/* AI Chat Section Styles */
+.ai-chat-section {
+  margin-top: 4rem;
+  padding: 2.5rem 0;
+}
+
+.ai-chat-section h2 {
+  text-align: center;
+  justify-content: center;
+}
+
+.ai-chat-container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 1.5rem;
+}
+
+.ai-chat-text {
+  flex: 1;
+}
+
+.ai-chat-text p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.ai-chat-image-wrapper {
+  flex: 0 0 280px;
+}
+
 @media (max-width: 968px) {
   .detail-grid {
     grid-template-columns: 1fr;
@@ -282,5 +314,10 @@
   
   .header-content h1 {
     font-size: 2rem;
+  }
+
+  .ai-chat-container {
+    flex-direction: column;
+    text-align: center;
   }
 }

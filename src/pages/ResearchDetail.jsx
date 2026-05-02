@@ -72,6 +72,7 @@ const ResearchDetail = () => {
               </div>
             </section>
           )}
+
         </div>
 
         <aside className="detail-sidebar">
@@ -111,6 +112,22 @@ const ResearchDetail = () => {
           </div>
         </aside>
       </div>
+
+      {data.aiChat && (
+        <section className="detail-section ai-chat-section">
+          <h2>{data.aiChat.title}</h2>
+          <div className="ai-chat-container">
+            <div className="ai-chat-text">
+              <p>{data.aiChat.description}</p>
+            </div>
+            <div className="ai-chat-image-wrapper">
+              <div className="screenshot-card">
+                <img src={data.aiChat.image} alt="AI Chatbot Interface" />
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
     </div>
   );
 };

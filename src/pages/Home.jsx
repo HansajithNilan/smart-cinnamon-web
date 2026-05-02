@@ -12,17 +12,17 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import { researchData } from "../data/researchData.jsx";
 
+// Import Mobile App Screenshots
+import appImg1 from "../assets/appScreen/IMG_3720.PNG";
+import appImg2 from "../assets/appScreen/IMG_3721.PNG";
+import appImg3 from "../assets/appScreen/IMG_3722.PNG";
+
 const Home = () => {
   const navigate = useNavigate();
 
   return (
     <div className="home-page">
       <section className="hero">
-        <div className="badge">
-          <Leaf size={18} />
-          RP-25-26J-375
-        </div>
-
         <h1>SMARTCINNAMON</h1>
         <p className="subtitle">
           A Multi-Modal Machine Learning and IoT Framework for Precision
@@ -38,9 +38,6 @@ const Home = () => {
 
         <div className="heroActions">
           <a href="#components">Explore Components</a>
-          <a href="#architecture" className="secondary">
-            View Architecture
-          </a>
         </div>
       </section>
 
@@ -60,26 +57,6 @@ const Home = () => {
         <div>
           <h2>Sri Lanka</h2>
           <p>Ceylon Cinnamon Focus</p>
-        </div>
-      </section>
-
-      <section id="architecture" className="section">
-        <h2>System Overview</h2>
-        <p>
-          The platform collects data from IoT sensors, mobile images, warehouse
-          sensor nodes and satellite/drone imagery. Data is sent to cloud
-          services, stored in MongoDB/Firebase, processed by ML models, and
-          displayed through web and mobile dashboards.
-        </p>
-
-        <div className="flow">
-          <div><Cpu /> Sensors / Images</div>
-          <span>→</span>
-          <div><Activity /> Cloud Processing</div>
-          <span>→</span>
-          <div><BarChart3 /> ML Analytics</div>
-          <span>→</span>
-          <div><ShieldCheck /> Alerts & Dashboard</div>
         </div>
       </section>
 
@@ -157,6 +134,29 @@ const Home = () => {
 
 
 
+      <section id="mobile-app" className="section mobile-app-preview">
+        <h2>Mobile Experience</h2>
+        <p className="section-desc">
+          Experience real-time analytics and control right from your pocket. Our mobile application connects seamlessly with our smart devices.
+        </p>
+        <div className="app-preview-grid">
+          <div className="app-screenshot">
+            <img src={appImg1} alt="Mobile App Home" loading="lazy" />
+          </div>
+          <div className="app-screenshot">
+            <img src={appImg2} alt="Mobile App Features" loading="lazy" />
+          </div>
+          <div className="app-screenshot">
+            <img src={appImg3} alt="Mobile App Analysis" loading="lazy" />
+          </div>
+        </div>
+        <div style={{ textAlign: "center", marginTop: "40px" }}>
+          <Link to="/app" className="nav-cta" style={{ display: "inline-block", textDecoration: "none", padding: "12px 24px", background: "#8bc34a", color: "#061006", borderRadius: "10px", fontWeight: "bold" }}>
+            View Full App Showcase
+          </Link>
+        </div>
+      </section>
+
       <section id="about" className="section about-us">
         <h2>About Us</h2>
         <p className="section-desc">
@@ -188,14 +188,6 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="impact" className="section conclusion">
-        <h2>Expected Impact</h2>
-        <p>
-          SMARTCINNAMON helps cinnamon farmers, estate managers and exporters
-          reduce fertilizer waste, detect diseases early, improve land usage,
-          protect warehouse quality and maintain export-grade cinnamon standards.
-        </p>
-      </section>
     </div>
   );
 };

@@ -528,6 +528,55 @@ h1 {
   box-shadow: 0 5px 15px rgba(0, 119, 181, 0.4);
 }
 
+/* Mobile App Preview Section */
+.mobile-app-preview {
+  text-align: center;
+  background: linear-gradient(to bottom, #07130c, #0a1f12);
+}
+
+.app-preview-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.app-screenshot {
+  width: 220px;
+  background: #111;
+  border-radius: 30px;
+  padding: 10px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.app-screenshot::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45%;
+  height: 20px;
+  background: #111;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  z-index: 2;
+}
+
+.app-screenshot:hover {
+  transform: translateY(-10px);
+}
+
+.app-screenshot img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+}
+
 @media (max-width: 900px) {
 
   .stats,
