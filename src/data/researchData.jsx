@@ -7,6 +7,11 @@ import vaImg3 from "../assets/vacantAreaScreens/IMG_3729.PNG";
 import vaImg4 from "../assets/vacantAreaScreens/IMG_3730.PNG";
 import vaChatImg from "../assets/vacantAreaScreens/chatimage.PNG";
 
+import smImg1 from "../assets/soilmonitorscreen/Proposal presentation 25-26J-375.jpeg";
+import smImg2 from "../assets/soilmonitorscreen/WhatsApp Image 2026-05-03 at 20.44.14.jpeg";
+import smImg3 from "../assets/soilmonitorscreen/WhatsApp Image 2026-05-03 at 20.44.15 copy.jpeg";
+import smImg4 from "../assets/soilmonitorscreen/WhatsApp Image 2026-05-03 at 20.44.15.jpeg";
+
 export const researchData = [
   {
     id: "fertilizer",
@@ -30,6 +35,7 @@ export const researchData = [
     accuracy: "Overall expected accuracy: 90% - 95%",
     proposalUrl: "/smart-cinnamon-web/proposals/fertilizer_proposal.pdf",
     tafUrl: "/smart-cinnamon-web/taf/research_taf.pdf",
+    appScreenshots: [smImg1, smImg2, smImg3, smImg4],
     fullDetails: "Detailed information about the IoT sensors used, the calibration process for NPK sensors, and how the machine learning models (Random Forest, CatBoost, XGBoost) are integrated to provide real-time recommendations. This module focuses on optimizing the nutrient balance in the soil to maximize cinnamon yield while minimizing environmental impact.",
   },
   {
