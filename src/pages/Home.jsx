@@ -8,6 +8,10 @@ import {
   Facebook,
   Linkedin,
   FileText,
+  User,
+  MessageSquare,
+  Send,
+  Mail
 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { researchData } from "../data/researchData.jsx";
@@ -17,8 +21,29 @@ import appImg1 from "../assets/appScreen/IMG_3720.PNG";
 import appImg2 from "../assets/appScreen/IMG_3721.PNG";
 import appImg3 from "../assets/appScreen/IMG_3722.PNG";
 
+// Import Supervisor Images
+import supervisorImg from "../assets/supervisorImage/sanjic_20260426_1777219346.jpeg";
+import cosupervisorImg from "../assets/cosupervisorImage/shalinir_20260426_1777219902.jpeg";
+
 const Home = () => {
   const navigate = useNavigate();
+  const [formData, setFormData] = React.useState({
+    name: "",
+    message: ""
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    // Add logic to handle form submission (e.g., API call)
+    alert("Thank you for your message! We will get back to you soon.");
+    setFormData({ name: "", message: "" });
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   return (
     <div className="home-page">
@@ -157,6 +182,39 @@ const Home = () => {
         </div>
       </section>
 
+      <section id="supervisors" className="section supervisors">
+        <h2>Our Supervisors</h2>
+        <p className="section-desc">
+          Guided by industry experts and academic leaders to ensure the highest standards of research and innovation.
+        </p>
+
+        <div className="supervisor-grid">
+          <div className="supervisor-card">
+            <div className="supervisor-image">
+              <img src={supervisorImg} alt="Ms. Sanjeevi Chandrasiri" />
+            </div>
+            <div className="supervisor-info">
+              <h3>Ms. Sanjeevi Chandrasiri</h3>
+              <p className="designation">Senior Lecturer</p>
+              <p className="department">Department of Information Technology</p>
+              <p className="faculty">Faculty of Computing</p>
+            </div>
+          </div>
+
+          <div className="supervisor-card">
+            <div className="supervisor-image">
+              <img src={cosupervisorImg} alt="Ms. Shalini Rupasinghe" />
+            </div>
+            <div className="supervisor-info">
+              <h3>Ms. Shalini Rupasinghe</h3>
+              <p className="designation">Assistant Lecturer</p>
+              <p className="department">Department of First Year Division</p>
+              <p className="faculty">Faculty of Computing</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="about" className="section about-us">
         <h2>About Us</h2>
         <p className="section-desc">
@@ -185,6 +243,75 @@ const Home = () => {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+      <section id="contact" className="section contact-us">
+        <div className="contact-container">
+          <div className="contact-info">
+            <h2>Contact Us</h2>
+            <p className="section-desc">
+              Have questions about SMARTCINNAMON? Get in touch with our team of experts.
+            </p>
+            
+            <div className="contact-details">
+              <div className="contact-item">
+                <div className="item-icon">
+                  <Mail size={20} />
+                </div>
+                <div className="item-text">
+                  <h4>Email</h4>
+                  <p>info@smartcinnamon.lk</p>
+                </div>
+              </div>
+              <div className="contact-item">
+                <div className="item-icon">
+                  <Activity size={20} />
+                </div>
+                <div className="item-text">
+                  <h4>Research Lab</h4>
+                  <p>Faculty of Computing, SLIIT</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="contact-form-container">
+            <form className="contact-form" onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label htmlFor="name">
+                  <User size={16} /> Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Your full name"
+                  required
+                />
+              </div>
+              
+              <div className="form-group">
+                <label htmlFor="message">
+                  <MessageSquare size={16} /> Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="How can we help you?"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" className="submit-btn">
+                <span>Send Message</span>
+                <Send size={18} />
+              </button>
+            </form>
+          </div>
         </div>
       </section>
 

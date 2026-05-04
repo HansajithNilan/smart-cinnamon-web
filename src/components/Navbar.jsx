@@ -40,6 +40,7 @@ const Navbar = () => {
           <a href="#components" onClick={(e) => handleNavClick(e, "#components")}>Components</a>
           <a href="#gap" onClick={(e) => handleNavClick(e, "#gap")}>Research Gap</a>
           <a href="#about" onClick={(e) => handleNavClick(e, "#about")}>About Us</a>
+          <a href="#contact" onClick={(e) => handleNavClick(e, "#contact")}>Contact</a>
           <Link to="/documents" onClick={() => setIsOpen(false)}>Documents</Link>
           <Link to="/app" onClick={() => setIsOpen(false)}>Mobile App</Link>
           <button className="nav-cta">Get Started</button>
